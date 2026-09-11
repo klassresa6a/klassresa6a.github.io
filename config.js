@@ -2,7 +2,7 @@
 // Даты и время — по Стокгольму. Неизвестные значения оставляйте null.
 window.KLASSRESA_CONFIG = {
   className: '6A',
-  finance: { balanceSek: 26731, goalSek: 70000, balanceUpdatedAt: null },
+  finance: { balanceSek: 26731, goalSek: 50000, balanceUpdatedAt: null },
   contact: { email: 'gingit.scully@gmail.com' },
   activities: [],
   volunteerTasks: [],
@@ -13,7 +13,7 @@ window.KLASSRESA_CONFIG = {
     { id: 'film', title: 'Filmkväll', thresholdSek: 15000 },
     { id: 'icecream', title: 'Glassfest', thresholdSek: 30000 },
     { id: 'disco', title: 'Discofest', thresholdSek: 40000 },
-    { id: 'trip', title: 'Klassresan', thresholdSek: 70000 }
+    { id: 'trip', title: 'Klassresan', thresholdSek: 50000 }
   ],
   destinations: [
     {
