@@ -19,7 +19,11 @@
   const email = data.contact?.email;
   if (typeof email === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     document.querySelectorAll('.contact-email').forEach(a => { a.textContent = email; a.href = 'mailto:' + email; });
-    $('help-contact').href = 'mailto:' + email;
+    const helpContact = $('help-contact');
+
+if (helpContact) {
+  helpContact.href = 'mailto:' + email;
+}
   } else { document.querySelectorAll('.contact-email, #help-contact').forEach(a => a.hidden = true); }
   sectionGuard('finance', () => {
     const result = C.progress(data.finance?.balanceSek, data.finance?.goalSek), box = $('finance'); box.replaceChildren();
