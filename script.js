@@ -12,7 +12,22 @@
   function link(label, url, cls = 'button') { const a = el('a', cls, label); a.href = url; return a; }
   function button(label, fn, cls = 'button secondary') { const b = el('button', cls, label); b.type = 'button'; b.addEventListener('click', fn); return b; }
   function details(label, ...content) { return append(el('details'), el('summary', '', label), ...content); }
-  function sectionGuard(id, render) { try { render(); } catch (error) { console.error(id, error); $(id).replaceChildren(el('p', 'fine', 'Uppgifterna kunde inte visas just nu.')); } }
+function sectionGuard(id, render) {
+  const container = $(id);
+
+  // Раздел может быть удалён из HTML.
+  if (!container) return;
+
+  try {
+    render();
+  } catch (error) {
+    console.error(id, error);
+
+    container.replaceChildren(
+      el('p', 'fine', 'Uppgifterna kunde inte visas just nu.')
+    );
+  }
+}
   const errors = C.validate(data);
   if (errors.length) console.warn('Kontrollera config.js:', errors);
   document.querySelectorAll('[data-class]').forEach(n => n.textContent = data.className || '6A');
