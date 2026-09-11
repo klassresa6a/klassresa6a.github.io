@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#086b68">
+  <meta name="description" content="Följ klasskassan, hitta aktiviteter och planera klassresan tillsammans med klass 6A.">
+  <title>Klass 6A · Tillsammans mot klassresan</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23086b68'/%3E%3Ctext x='20' y='26' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='19' fill='white'%3E6A%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="core.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Hoppa till innehållet</a>
+  <header class="header"><div class="header-inner">
+    <a class="brand" href="#main" aria-label="Klass 6A, startsida"><span class="brand-mark" data-class>6A</span><span>Klassresan<span class="brand-sub">Äventyrsklubben</span></span></a>
+    <nav aria-label="Huvudmeny"><a href="#klasskassan">Klasskassan</a><a href="#aktiviteter">Aktiviteter</a><a href="#resmal">Resmål</a></nav>
+  </div></header>
+  <main id="main" tabindex="-1" class="page">
+    <div class="intro adventure-intro"><div class="intro-copy"><p class="eyebrow">ALLA OMBORD, KLASS 6A!</p><h1>Nästa stopp:<br><span>klassresan!</span></h1><p>Ett klassäventyr. Ett gemensamt mål.</p></div><div class="hero-art"><img src="assets/adventure-bus.png" width="1536" height="1024" alt="" fetchpriority="high"><span class="crew-sticker">TEAM <b>6A</b></span></div></div>
+    <div class="top-grid">
+      <section class="fund card" id="klasskassan" aria-labelledby="fund-title">
+        <div class="section-top"><h2 id="fund-title">Äventyrskassan</h2><span class="fund-label">Klass <span data-class>6A</span></span></div>
+        <div id="finance"><p>Uppgifterna kunde inte visas just nu.</p></div>
+      </section>
+      <section class="card next" id="aktiviteter" aria-labelledby="next-title"><div class="section-top"><h2 id="next-title">Nästa uppdrag</h2><span class="icon" aria-hidden="true">↗</span></div><div id="next-activity"><p>Nästa aktivitet planeras. Mer information kommer snart.</p></div></section>
+    </div>
+    <section class="help-strip" aria-labelledby="help-title"><div><p class="eyebrow">BONUSUPPDRAG FÖR VUXNA</p><h2 id="help-title">Hjälp laget framåt!</h2><p>När vi planerar nästa aktivitet hittar du uppgifter här. All hjälp är frivillig.</p></div><a class="button secondary" id="help-contact" href="mailto:gingit.scully@gmail.com">Kontakta klassföräldrarna <span aria-hidden="true">↗</span></a><div id="tasks"></div></section>
+    <section id="upcoming-section" class="section" hidden><div class="section-heading"><h2>Fler aktiviteter</h2></div><div id="upcoming" class="two-grid"></div></section>
+    <section id="planned-section" class="section" hidden><div class="section-heading"><h2>Planeras</h2></div><div id="planned" class="two-grid"></div></section>
+    <section class="section" aria-labelledby="journey-title"><div class="section-heading"><div><p class="eyebrow">VÅR ÄVENTYRSKARTA</p><h2 id="journey-title">Från start till skolresa</h2></div><button class="button text-button" id="celebrate" type="button">High five, 6A! <span aria-hidden="true">🙌</span></button></div><div class="journey card"><div id="next-milestone"></div><div class="route-board"><p class="map-caption"><span aria-hidden="true">🧭</span> Ett delmål i taget. Alla följer med.</p><ol class="milestones adventure-route" id="milestones"></ol></div><p class="map-note">Kartan visar delmålen, inte en proportionell pengaskala. Aktiviteterna planeras separat.</p></div></section>
+    <section class="section" id="resmal" aria-labelledby="destinations-title"><div class="section-heading"><div><p class="eyebrow">VÄLJ VÅRT NÄSTA ÄVENTYR</p><h2 id="destinations-title">Vad blir vårt äventyr?</h2></div><span class="section-note">2 idéer att utforska</span></div><p class="section-description">Datum och resmål bestämmer vi senare. Här är de billigaste alternativen från vår tidigare lista.</p><div class="two-grid" id="destinations"></div><p class="fine">Priserna är äldre uppskattningar per elev, inte offerter. Aktiviteter, transport och mat behöver prissättas innan vi väljer.</p></section>
+    <div class="bottom-grid section">
+      <section aria-labelledby="news-title"><p class="eyebrow">NYTT FRÅN BASLÄGRET</p><h2 id="news-title">Senaste nytt</h2><div id="news"></div><details id="more-news" hidden><summary>Visa fler nyheter</summary><div id="older-news"></div></details></section>
+      <section aria-labelledby="faq-title"><p class="eyebrow">INFÖR AVFÄRD</p><h2 id="faq-title">Bra att ha koll på</h2><div class="faq">
+        <details><summary>Hur kan jag hjälpa till?</summary><p>Du är välkommen att hjälpa till när det passar. Här lägger vi upp uppgifter inför kommande aktiviteter. Du kan också kontakta klassföräldrarna med en idé.</p></details>
+        <details><summary>Hur anmäler vi oss?</summary><p>När en aktivitet är planerad visas en anmälningslänk på dess kort. Där hittar du också datum, plats och annan praktisk information.</p></details>
+        <details><summary>Vad används klasskassan till?</summary><p>Vi samlar gemensamt till klassens resa eller aktivitet i slutet av sexan. Klasskassan är till för hela klassen. Att hjälpa till med insamlingen är frivilligt.</p></details>
+        <details><summary>Vem kontaktar jag?</summary><p>Hör gärna av dig till klassföräldrarna: <a class="contact-email" href="mailto:gingit.scully@gmail.com">gingit.scully@gmail.com</a>.</p></details>
+      </div></section>
+    </div>
+    <section class="archive section" aria-label="Arkiv"><details><summary>Tidigare planering <span id="archive-count" class="count"></span></summary><p class="fine">Sparat från klassens tidigare sida. Ett passerat datum betyder inte att genomförandet är bekräftat.</p><div id="archive" class="two-grid"></div></details></section>
+    <noscript><p class="card">Aktivera JavaScript för att visa klasskassan och aktiviteterna. Du kan alltid kontakta klassföräldrarna via e-post nedan.</p></noscript>
+  </main>
+  <footer class="footer"><div><strong>Klass <span data-class>6A</span></strong><span>En resa för hela klassen.</span></div><a class="contact-email" href="mailto:gingit.scully@gmail.com">gingit.scully@gmail.com</a></footer>
+  <div id="status" class="toast" role="status" aria-live="polite"></div><div class="confetti" id="confetti" aria-hidden="true"></div>
+</body>
+</html>
