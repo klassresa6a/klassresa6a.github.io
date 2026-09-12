@@ -27,14 +27,14 @@ window.KLASSRESA_CONFIG = {
       sourceUrl: 'https://klassresa5a.github.io/'
     },
     {
-      id: 'stockholm', name: 'En dag i Stockholm', tag: 'Nära till upplevelserna',
-      location: 'Stockholm', duration: 'En dag', nights: 0,
-      priceMinSek: 500, priceMaxSek: 1000,
-      summary: 'Upptäck staden tillsammans. Till exempel ett museum, Skansen eller en annan gemensam aktivitet.',
-      includes: ['En gemensam dag i staden', 'Upplägg och aktiviteter bestäms senare'],
-      extras: ['Mat, inträden och eventuell kollektivtrafik.', 'Dagsturen är ännu inte prissatt; intervallet kommer från den äldre listan.'],
-      checkedAt: null, sourceLabel: 'Tidigare uppskattning på klassens sida',
-      sourceUrl: 'https://klassresa5a.github.io/'
+      id: 'galo', name: 'Gålö Havsbad', tag: 'Stugäventyr vid havet',
+      location: 'Gålö, Stockholms skärgård', duration: 'Två dagar', nights: 1,
+      priceMinSek: 695, priceMaxSek: null, priceUnit: 'person',
+      summary: 'En natt i stuga, lek och upptäckter vid havet! Gålö Bas är alternativet för oss som vill laga mat och ordna aktiviteter tillsammans.',
+      includes: ['Gålö Bas: en natt i stuga och samlingslokal under vistelsen.', 'Uteleksaker och tillgång till spelhallen under öppettiderna.', 'Möjlighet till tipsrunda, skogspromenader och havsbad.'],
+      extras: ['Självhushåll och egen städning. Mat och transport behöver budgeteras separat.', 'Helgtillägg: 100 kr/person natt till lördag, 200 kr/person natt till söndag.', 'Gålö Standard med en natt kostar från 1 295 kr/person och inkluderar tre måltider, två timmars prova-på med kajak, kanot och SUP samt minigolf.', 'Begär offert för vårt datum och antal elever och vuxna. Kontrollera även sänglinne och handdukar.'],
+      checkedAt: '2026-09-12', sourceLabel: 'Se paket och priser hos Gålö Havsbad',
+      sourceUrl: 'https://galohavsbad.se/grupper/skolklasser/'
     }
   ],
   // Исторические записи не доказывают, что событие состоялось.
