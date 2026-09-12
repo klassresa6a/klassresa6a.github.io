@@ -129,10 +129,10 @@ if (helpContact) {
     arr('destinations').slice().sort((a, b) => (C.isNumber(a.priceMinSek) ? a.priceMinSek : Infinity) - (C.isNumber(b.priceMinSek) ? b.priceMinSek : Infinity)).forEach((d, index) => {
       const top = append(el('div', 'destination-top'), el('span', 'destination-tag', d.tag || 'Residé'), el('p', 'destination-number', 'FÖRSLAG ' + String(index + 1).padStart(2, '0')), el('h3', '', d.name));
       const body = append(el('div', 'destination-body'), el('p', '', d.summary));
-      append(body, append(el('div', 'chips'), ...[d.location, d.duration, d.nights === 0 ? 'Ingen övernattning' : d.nights ? d.nights + ' nätter' : null].filter(Boolean).map(text => el('span', 'chip', text))));
+      append(body, append(el('div', 'chips'), ...[d.location, d.duration, d.nights === 0 ? 'Ingen övernattning' : d.nights === 1 ? '1 natt' : d.nights ? d.nights + ' nätter' : null].filter(Boolean).map(text => el('span', 'chip', text))));
       const price = el('div', 'price');
-      price.append(document.createTextNode(C.isNumber(d.priceMinSek) && C.isNumber(d.priceMaxSek) ? new Intl.NumberFormat('sv-SE').format(d.priceMinSek) + '–' + C.money(d.priceMaxSek) : 'Pris kommer senare'));
-      price.append(el('small', '', ' / elev')); append(body, price, el('div', 'price-note', d.checkedAt ? 'Prisuppgift kontrollerad ' + d.checkedAt : 'Äldre uppskattning · behöver kontrolleras'));
+      price.append(document.createTextNode(C.isNumber(d.priceMinSek) && C.isNumber(d.priceMaxSek) ? new Intl.NumberFormat('sv-SE').format(d.priceMinSek) + '–' + C.money(d.priceMaxSek) : C.isNumber(d.priceMinSek) ? 'Från ' + C.money(d.priceMinSek) : 'Pris kommer senare'));
+      price.append(el('small', '', d.priceUnit === 'person' ? ' / person' : ' / elev')); append(body, price, el('div', 'price-note', d.checkedAt ? 'Prisuppgift kontrollerad ' + d.checkedAt : 'Äldre uppskattning · behöver kontrolleras'));
       const more = details('Vad behöver vi planera?');
       for (const [title, values] of [['Upplägg att utgå från', d.includes], ['Kostnader att kontrollera', d.extras]]) { append(more, el('h4', '', title), append(el('ul'), ...(Array.isArray(values) ? values : []).map(v => el('li', '', v)))); }
       more.append(el('p', 'fine', 'Totalpriset beror på upplägg, antal elever och medföljande vuxna.'));
