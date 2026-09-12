@@ -20,9 +20,9 @@ window.KLASSRESA_CONFIG = {
       id: 'boda-borg', name: 'Boda Borg · 100% Questar', tag: 'Questäventyr med övernattning',
       location: 'Oxelösund', duration: 'Till nästa morgon', nights: 1,
       priceMinSek: 1245, priceMaxSek: null,
-      summary: 'Klara kluriga uppdrag tillsammans, fortsätt äventyret på kvällen och sov över på vandrarhem! Paketet 100% Questar har aktiviteter första dagen och hemresa efter frukost.',
+      summary: 'Klara kluriga uppdrag tillsammans, fortsätt äventyret på kvällen och sov över på vandrarhem! Paketet 100% Questar innehåller en dag och kväll med Questar, övernattning och frukost.',
       includes: ['Questar på dagen och kvällspass kl. 18–20.', 'Tacobuffé, fika, middag och frukost.', 'Prisutdelning, filmkväll och en natt på vandrarhem.'],
-      extras: ['Pris enligt broschyren för 2026: 1 245 kr/elev och 720 kr/medföljande vuxen.', '10 % rabatt på elevpriset vid ankomst måndag–torsdag enligt 2026 års villkor.', 'Transport till och från Oxelösund behöver budgeteras separat. Egen städning; avresa efter frukost ca kl. 09.', 'Bekräfta pris för vårt resår, datum, antal elever och vuxna samt sänglinne och handdukar vid offert.'],
+      extras: ['Pris enligt broschyren för 2026: 1 245 kr/elev och 720 kr/medföljande vuxen.', '10 % rabatt på elevpriset vid ankomst måndag–torsdag enligt 2026 års villkor.', 'Transport till och från Oxelösund behöver budgeteras separat. Vi städar själva.', 'Aktiviteter efter frukost dag 2 ingår inte i grundpaketet 100% Questar. Eventuella tillägg och hemresetid bestäms vid bokning.', 'Bekräfta pris för vårt resår, datum, antal elever och vuxna samt sänglinne och handdukar vid offert.'],
       checkedAt: '2026-09-12', sourceLabel: 'Se paketet i klassresebroschyren 2026 (PDF)',
       sourceUrl: 'https://www.bodaborg.se/oxelosund/wp-content/uploads/sites/5/2024/07/KLASSRESEBROSCHYR-2026.pdf#page=9'
     },
