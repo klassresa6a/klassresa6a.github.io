@@ -27,13 +27,13 @@ window.KLASSRESA_CONFIG = {
       sourceUrl: 'https://klassresa5a.github.io/'
     },
     {
-      id: 'galo', name: 'Gålö Havsbad', tag: 'Stugäventyr vid havet',
+      id: 'galo', name: 'Gålö Havsbad · Standard', tag: 'Mat, boende och aktiviteter',
       location: 'Gålö, Stockholms skärgård', duration: 'Två dagar', nights: 1,
-      priceMinSek: 695, priceMaxSek: null, priceUnit: 'person',
-      summary: 'En natt i stuga, lek och upptäckter vid havet! Gålö Bas är alternativet för oss som vill laga mat och ordna aktiviteter tillsammans.',
-      includes: ['Gålö Bas: en natt i stuga och samlingslokal under vistelsen.', 'Uteleksaker och tillgång till spelhallen under öppettiderna.', 'Möjlighet till tipsrunda, skogspromenader och havsbad.'],
-      extras: ['Självhushåll och egen städning. Mat och transport behöver budgeteras separat.', 'Helgtillägg: 100 kr/person natt till lördag, 200 kr/person natt till söndag.', 'Gålö Standard med en natt kostar från 1 295 kr/person och inkluderar tre måltider, två timmars prova-på med kajak, kanot och SUP samt minigolf.', 'Begär offert för vårt datum och antal elever och vuxna. Kontrollera även sänglinne och handdukar.'],
-      checkedAt: '2026-09-12', sourceLabel: 'Se paket och priser hos Gålö Havsbad',
+      priceMinSek: 1295, priceMaxSek: null, priceUnit: 'person',
+      summary: 'Ett stugäventyr vid havet med mat och aktiviteter! Vi sover över en natt, provar vattenaktiviteter och spelar minigolf tillsammans.',
+      includes: ['En natt i stuga och samlingslokal på kvällen från kl. 18.', 'Tre måltider: frukost, lunch och middag.', 'Två timmars prova-på med kajak, kanot och SUP samt minigolf.', 'Uteleksaker och tillgång till spelhallen under öppettiderna.', 'Möjlighet till tipsrunda, skogspromenader och havsbad.'],
+      extras: ['Transport behöver budgeteras separat. Vi städar själva.', 'Helgtillägg: 100 kr/person natt till lördag, 200 kr/person natt till söndag.', 'Begär offert för vårt datum och antal elever och vuxna. Kontrollera även sänglinne och handdukar.'],
+      checkedAt: '2026-09-12', sourceLabel: 'Se Standard-paketet hos Gålö Havsbad',
       sourceUrl: 'https://galohavsbad.se/grupper/skolklasser/'
     }
   ],
