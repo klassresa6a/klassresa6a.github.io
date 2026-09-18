@@ -25,16 +25,6 @@ window.KLASSRESA_CONFIG = {
       extras: ['Pris enligt broschyren för 2026: 1 245 kr/elev och 720 kr/medföljande vuxen.', '10 % rabatt på elevpriset vid ankomst måndag–torsdag enligt 2026 års villkor.', 'Transport till och från Oxelösund behöver budgeteras separat. Vi städar själva.', 'Aktiviteter efter frukost dag 2 ingår inte i grundpaketet 100% Questar. Eventuella tillägg och hemresetid bestäms vid bokning.', 'Bekräfta pris för vårt resår, datum, antal elever och vuxna samt sänglinne och handdukar vid offert.'],
       checkedAt: '2026-09-12', sourceLabel: 'Se paketet i klassresebroschyren 2026 (PDF)',
       sourceUrl: 'https://www.bodaborg.se/oxelosund/wp-content/uploads/sites/5/2024/07/KLASSRESEBROSCHYR-2026.pdf#page=9'
-    },
-    {
-      id: 'galo', name: 'Gålö Havsbad · Standard', tag: 'Mat, boende och aktiviteter',
-      location: 'Gålö, Stockholms skärgård', duration: 'Två dagar', nights: 1,
-      priceMinSek: 1295, priceMaxSek: null, priceUnit: 'person',
-      summary: 'Ett stugäventyr vid havet med mat och aktiviteter! Vi sover över en natt, provar vattenaktiviteter och spelar minigolf tillsammans.',
-      includes: ['En natt i stuga och samlingslokal på kvällen från kl. 18.', 'Tre måltider: frukost, lunch och middag.', 'Två timmars prova-på med kajak, kanot och SUP samt minigolf.', 'Uteleksaker och tillgång till spelhallen under öppettiderna.', 'Möjlighet till tipsrunda, skogspromenader och havsbad.'],
-      extras: ['Transport behöver budgeteras separat. Vi städar själva.', 'Helgtillägg: 100 kr/person natt till lördag, 200 kr/person natt till söndag.', 'Begär offert för vårt datum och antal elever och vuxna. Kontrollera även sänglinne och handdukar.'],
-      checkedAt: '2026-09-12', sourceLabel: 'Se Standard-paketet hos Gålö Havsbad',
-      sourceUrl: 'https://galohavsbad.se/grupper/skolklasser/'
     }
   ],
   // Исторические записи не доказывают, что событие состоялось.
