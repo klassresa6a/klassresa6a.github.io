@@ -66,14 +66,14 @@ if (helpContact) {
   function activityCard(a, archived = false, featured = false) {
     const card = el('article', featured ? 'activity' : 'card activity'); card.id = 'activity-' + a.id;
     const st = C.state(a, now);
-    append(card, el('span', 'badge', st === 'cancelled' ? 'Inställd' : archived ? (a.result ? 'Genomförd' : 'Tidigare planering') : st === 'ongoing' ? 'Pågår nu' : st === 'tentative' ? 'Planeras' : 'Kommande'), el('h3', '', a.title), el('p', 'meta', C.dateLabel(a.schedule)), a.place ? el('p', 'meta', a.place) : null, el('p', '', a.summary || ''));
+    append(card, el('span', 'badge', st === 'cancelled' ? 'Inställd' : archived ? (a.result ? 'Genomförd' : 'Tidigare planering') : st === 'ongoing' ? 'Pågår nu' : st === 'tentative' ? 'Planeras' : 'Kommande'), el('h3', '', a.title), el('p', 'meta', a.timePending ? C.dateLabel(a.schedule).replace(' · hela dagen', ' · tid kommer') : C.dateLabel(a.schedule)), a.place ? el('p', 'meta', a.place) : null, el('p', '', a.summary || ''));
     if (a.description) card.append(details('Visa detaljer', el('p', 'description', a.description)));
     if (a.result) append(card, el('p', 'fine', a.result.text || ''), C.isNumber(a.result.netIncomeSek) ? el('strong', '', 'Till klasskassan: ' + C.money(a.result.netIncomeSek)) : null);
     if (!archived && st !== 'cancelled') {
       if (C.validTime(a.signupDeadline)) card.append(el('p', 'fine', (Date.parse(a.signupDeadline) > +now ? 'Anmäl senast ' : 'Anmälan stängde ') + new Intl.DateTimeFormat('sv-SE', { dateStyle: 'medium', timeStyle: 'short', timeZone: C.TZ }).format(new Date(a.signupDeadline))));
       const actions = el('div', 'actions');
       if (C.signupOpen(a, now)) actions.append(link('Anmäl dig', C.safeUrl(a.signupUrl)));
-      if (['upcoming', 'ongoing'].includes(st)) actions.append(button('Lägg till i kalendern', () => saveCalendar(a)));
+      if (!a.timePending && ['upcoming', 'ongoing'].includes(st)) actions.append(button('Lägg till i kalendern', () => saveCalendar(a)));
       actions.append(button('Kopiera länk', () => share(a, card), 'button text-button'));
       card.append(actions);
     }
@@ -132,7 +132,7 @@ if (helpContact) {
       append(body, append(el('div', 'chips'), ...[d.location, d.duration, d.nights === 0 ? 'Ingen övernattning' : d.nights === 1 ? '1 natt' : d.nights ? d.nights + ' nätter' : null].filter(Boolean).map(text => el('span', 'chip', text))));
       const price = el('div', 'price');
       price.append(document.createTextNode(C.isNumber(d.priceMinSek) && C.isNumber(d.priceMaxSek) ? new Intl.NumberFormat('sv-SE').format(d.priceMinSek) + '–' + C.money(d.priceMaxSek) : C.isNumber(d.priceMinSek) ? 'Från ' + C.money(d.priceMinSek) : 'Pris kommer senare'));
-      price.append(el('small', '', d.priceUnit === 'person' ? ' / person' : ' / elev')); append(body, price, el('div', 'price-note', d.checkedAt ? 'Prisuppgift kontrollerad ' + d.checkedAt : 'Äldre uppskattning · behöver kontrolleras'));
+      price.append(el('small', '', d.priceUnit === 'person' ? ' / person' : ' / elev')); append(body, price, el('div', 'price-note', d.priceNote || (d.checkedAt ? 'Prisuppgift kontrollerad ' + d.checkedAt : 'Äldre uppskattning · behöver kontrolleras')));
       const more = details('Vad behöver vi planera?');
       for (const [title, values] of [['Upplägg att utgå från', d.includes], ['Kostnader att kontrollera', d.extras]]) { append(more, el('h4', '', title), append(el('ul'), ...(Array.isArray(values) ? values : []).map(v => el('li', '', v)))); }
       more.append(el('p', 'fine', 'Totalpriset beror på upplägg, antal elever och medföljande vuxna.'));
