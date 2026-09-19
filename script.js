@@ -133,8 +133,9 @@ if (helpContact) {
       const price = el('div', 'price');
       price.append(document.createTextNode(C.isNumber(d.priceMinSek) && C.isNumber(d.priceMaxSek) ? new Intl.NumberFormat('sv-SE').format(d.priceMinSek) + '–' + C.money(d.priceMaxSek) : C.isNumber(d.priceMinSek) ? 'Från ' + C.money(d.priceMinSek) : 'Pris kommer senare'));
       price.append(el('small', '', d.priceUnit === 'person' ? ' / person' : ' / elev')); append(body, price, el('div', 'price-note', d.priceNote || (d.checkedAt ? 'Prisuppgift kontrollerad ' + d.checkedAt : 'Äldre uppskattning · behöver kontrolleras')));
-      const more = details('Vad behöver vi planera?');
-      for (const [title, values] of [['Upplägg att utgå från', d.includes], ['Kostnader att kontrollera', d.extras]]) { append(more, el('h4', '', title), append(el('ul'), ...(Array.isArray(values) ? values : []).map(v => el('li', '', v)))); }
+      if (d.budgetSummary) body.append(el('p', 'fine', d.budgetSummary));
+      const more = details('Vad ingår och vilka tillval finns?');
+      for (const [title, values] of [['Det här ingår', d.includes], ['Tillval · kostar extra', d.addOns], ['Att kontrollera före bokning', d.extras]].filter(([, values]) => Array.isArray(values) && values.length)) { append(more, el('h4', '', title), append(el('ul'), ...(Array.isArray(values) ? values : []).map(v => el('li', '', v)))); }
       more.append(el('p', 'fine', 'Totalpriset beror på upplägg, antal elever och medföljande vuxna.'));
       if (C.safeUrl(d.sourceUrl)) more.append(link(d.sourceLabel || 'Källa', C.safeUrl(d.sourceUrl), 'button text-button'));
       body.append(more); $('destinations').append(append(el('article', 'card destination'), top, body));
