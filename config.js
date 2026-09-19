@@ -20,14 +20,17 @@ window.KLASSRESA_CONFIG = {
   ],
   destinations: [
     {
-      id: 'boda-borg', name: 'Boda Borg · 100% Questar', tag: 'Huvudalternativ · förfrågan skickad',
-      location: 'Oxelösund', duration: 'Till nästa morgon', nights: 1,
-      priceMinSek: null, priceMaxSek: null, priceNote: 'Vi inväntar offert och besked om tillgängligt datum för 2027.',
-      summary: 'Boda Borg är vårt huvudalternativ för klassresan. En förfrågan med övernattning för 24 barn och 4 vuxna är skickad för 21–22 maj eller 28–29 maj 2027. Datum, pris och bokning är ännu inte bekräftade.',
-      includes: ['Questar på dagen och kvällspass kl. 18–20.', 'Tacobuffé, fika, middag och frukost.', 'Prisutdelning, filmkväll och en natt på vandrarhem.'],
-      extras: ['Pris enligt broschyren för 2026: 1 245 kr/elev och 720 kr/medföljande vuxen.', '10 % rabatt på elevpriset vid ankomst måndag–torsdag enligt 2026 års villkor.', 'Transport till och från Oxelösund behöver budgeteras separat. Vi städar själva.', 'Aktiviteter efter frukost dag 2 ingår inte i grundpaketet 100% Questar. Eventuella tillägg och hemresetid bestäms vid bokning.', 'Bekräfta pris för vårt resår, datum, antal elever och vuxna samt sänglinne och handdukar vid offert.'],
-      checkedAt: '2026-09-12', sourceLabel: 'Se paketet i klassresebroschyren 2026 (PDF)',
-      sourceUrl: 'https://www.bodaborg.se/oxelosund/wp-content/uploads/sites/5/2024/07/KLASSRESEBROSCHYR-2026.pdf#page=9'
+      id: 'boda-borg', name: 'Boda Camp Questar & Spök', tag: 'Huvudalternativ · förfrågan skickad',
+      location: 'Boda Borg och Boda Camp, Oxelösund', duration: 'Två dagar', nights: 1,
+      priceMinSek: 1290, priceMaxSek: null,
+      priceNote: 'Preliminärt enligt paketkalkylen. Pris och tillgänglighet för maj 2027 inväntar bekräftelse.',
+      budgetSummary: 'Medföljande vuxen: 785 kr. Grundpaket för 24 elever och 4 vuxna: 34 100 kr (30 960 kr + 3 140 kr). Resan till och från Oxelösund och eventuella tillval tillkommer.',
+      summary: 'Vårt huvudalternativ är Boda Camp Questar & Spök: Questar på Boda Borg, Spökvind och en natt i tält på Boda Camp. Förfrågan för 24 barn och 4 vuxna är skickad för 21–22 maj eller 28–29 maj 2027. Bokning och datum är ännu inte bekräftade.',
+      includes: ['Questar i 5 timmar på Boda Borg.', 'Tacobuffé och fika med bulle.', 'Prisutdelning för eleverna.', 'Vildmarkspanna, Spökvind för eleverna och korvgrillning.', 'En natt i tält på Boda Camp och frukost.'],
+      addOns: ['Saltotrampolin: +110 kr/elev.', 'Klättervägg: +110 kr/elev.', 'Bananbåt: +230 kr/elev.', 'Kajak: +210 kr/elev.', 'Terrängbana: +230 kr/elev.', 'Vid val av bananbåt, kajak eller terrängbana lägger kalkylatorn automatiskt till hamburgarlunch. Lunchkostnaden behöver räknas med utöver aktivitetspriset och bekräftas i offerten.'],
+      extras: ['Tillvalen är inte bokade och ingår inte i grundpriset 34 100 kr.', 'Transport till och från Oxelösund behöver budgeteras separat. Bekräfta även transporten mellan Boda Borg och Boda Camp.', 'Program efter frukost, tillval och hemresetid bestäms vid bokning.', 'Bekräfta 2027 års priser, vad som ingår för vuxna samt villkor för städning, sänglinne och handdukar.'],
+      checkedAt: '2026-09-19', sourceLabel: 'Läs om klassresor hos Boda Borg',
+      sourceUrl: 'https://www.bodaborg.se/oxelosund/packages/allt-om-klassresor/'
     }
   ],
   // Исторические записи не доказывают, что событие состоялось.
