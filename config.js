@@ -4,7 +4,10 @@ window.KLASSRESA_CONFIG = {
   className: '6A',
   finance: { balanceSek: 26731, goalSek: 50000, balanceUpdatedAt: null },
   contact: { email: 'gingit.scully@gmail.com' },
-  activities: [],
+  activities: [
+    { id: 'halloween-2026', title: 'Halloween', schedule: { kind: 'allDay', startDate: '2026-11-08', endDateExclusive: '2026-11-09' }, timePending: true, status: 'scheduled', summary: 'Lokalen är bokad. Mer information om aktiviteter, snacks och föräldrahjälp kommer. Klockslag meddelas senare.' },
+    { id: 'kanelbullens-dag-2026', title: 'Kanelbullens dag', schedule: { kind: 'tentative', label: 'Oktober 2026 · datum inte bestämt' }, status: 'scheduled', summary: 'Vi planerar en aktivitet eller försäljning i samband med Kanelbullens dag. Mer information kommer.', description: 'Kanelbullens dag är söndag 4 oktober. Om vi ordnar något i skolan på fredagen är det 2 oktober. Datum och upplägg är ännu inte bestämda.' }
+  ],
   volunteerTasks: [],
   news: [],
   milestones: [
@@ -17,10 +20,10 @@ window.KLASSRESA_CONFIG = {
   ],
   destinations: [
     {
-      id: 'boda-borg', name: 'Boda Borg · 100% Questar', tag: 'Questäventyr med övernattning',
+      id: 'boda-borg', name: 'Boda Borg · 100% Questar', tag: 'Huvudalternativ · förfrågan skickad',
       location: 'Oxelösund', duration: 'Till nästa morgon', nights: 1,
-      priceMinSek: 1245, priceMaxSek: null,
-      summary: 'Klara kluriga uppdrag tillsammans, fortsätt äventyret på kvällen och sov över på vandrarhem! Paketet 100% Questar innehåller en dag och kväll med Questar, övernattning och frukost.',
+      priceMinSek: null, priceMaxSek: null, priceNote: 'Vi inväntar offert och besked om tillgängligt datum för 2027.',
+      summary: 'Boda Borg är vårt huvudalternativ för klassresan. En förfrågan med övernattning för 24 barn och 4 vuxna är skickad för 21–22 maj eller 28–29 maj 2027. Datum, pris och bokning är ännu inte bekräftade.',
       includes: ['Questar på dagen och kvällspass kl. 18–20.', 'Tacobuffé, fika, middag och frukost.', 'Prisutdelning, filmkväll och en natt på vandrarhem.'],
       extras: ['Pris enligt broschyren för 2026: 1 245 kr/elev och 720 kr/medföljande vuxen.', '10 % rabatt på elevpriset vid ankomst måndag–torsdag enligt 2026 års villkor.', 'Transport till och från Oxelösund behöver budgeteras separat. Vi städar själva.', 'Aktiviteter efter frukost dag 2 ingår inte i grundpaketet 100% Questar. Eventuella tillägg och hemresetid bestäms vid bokning.', 'Bekräfta pris för vårt resår, datum, antal elever och vuxna samt sänglinne och handdukar vid offert.'],
       checkedAt: '2026-09-12', sourceLabel: 'Se paketet i klassresebroschyren 2026 (PDF)',
