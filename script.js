@@ -55,14 +55,6 @@ if (helpContact) {
   function saveCalendar(a) {
     try { const url = URL.createObjectURL(new Blob([C.makeICS(a)], { type: 'text/calendar;charset=utf-8' })); const download = link('', url); download.download = a.id + '.ics'; document.body.append(download); download.click(); download.remove(); setTimeout(() => URL.revokeObjectURL(url), 2000); notify('Kalenderfilen är klar att öppna.'); } catch { notify('Kalenderfilen kunde inte skapas.'); }
   }
-  async function share(a, box) {
-    const url = new URL(location.href); url.hash = 'activity-' + a.id;
-    if (location.protocol !== 'file:') {
-      try { await navigator.clipboard.writeText(url.href); notify('Länken är kopierad.'); return; } catch { /* selectable fallback */ }
-    }
-    box.querySelector('.share-fallback')?.remove();
-    const note = el('p', 'share-fallback', location.protocol === 'file:' ? 'En delbar länk finns när sidan har publicerats.' : url.href); box.append(note);
-  }
   function activityCard(a, archived = false, featured = false) {
     const card = el('article', featured ? 'activity' : 'card activity'); card.id = 'activity-' + a.id;
     const st = C.state(a, now);
@@ -73,8 +65,12 @@ if (helpContact) {
       if (C.validTime(a.signupDeadline)) card.append(el('p', 'fine', (Date.parse(a.signupDeadline) > +now ? 'Anmäl senast ' : 'Anmälan stängde ') + new Intl.DateTimeFormat('sv-SE', { dateStyle: 'medium', timeStyle: 'short', timeZone: C.TZ }).format(new Date(a.signupDeadline))));
       const actions = el('div', 'actions');
       if (C.signupOpen(a, now)) actions.append(link('Anmäl dig', C.safeUrl(a.signupUrl)));
-      if (!a.timePending && ['upcoming', 'ongoing'].includes(st)) actions.append(button('Lägg till i kalendern', () => saveCalendar(a)));
-      actions.append(button('Kopiera länk', () => share(a, card), 'button text-button'));
+      if (['upcoming', 'ongoing'].includes(st)) {
+        actions.append(button('Spara i kalendern', () => saveCalendar(a)));
+        if (a.timePending) actions.append(el('p', 'fine', 'Sparas som en heldagspåminnelse. Klockslag meddelas senare.'));
+      } else if (st === 'tentative') {
+        actions.append(el('p', 'fine', 'Du kan spara aktiviteten i kalendern när datumet är bestämt.'));
+      }
       card.append(actions);
     }
     return card;
