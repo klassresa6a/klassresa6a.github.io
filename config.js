@@ -6,7 +6,7 @@ window.KLASSRESA_CONFIG = {
   contact: { email: 'gingit.scully@gmail.com' },
   activities: [
     { id: 'halloween-2026', title: 'Halloween', schedule: { kind: 'allDay', startDate: '2026-11-08', endDateExclusive: '2026-11-09' }, timePending: true, status: 'scheduled', summary: 'Lokalen är bokad. Mer information om aktiviteter, snacks och föräldrahjälp kommer. Klockslag meddelas senare.' },
-    { id: 'kanelbullens-dag-2026', title: 'Kanelbullens dag', schedule: { kind: 'tentative', label: 'Oktober 2026 · datum inte bestämt' }, status: 'scheduled', summary: 'Vi planerar en aktivitet eller försäljning i samband med Kanelbullens dag. Mer information kommer.', description: 'Kanelbullens dag är söndag 4 oktober. Om vi ordnar något i skolan på fredagen är det 2 oktober. Datum och upplägg är ännu inte bestämda.' }
+    { id: 'kanelbullens-dag-2026', title: 'Kanelbullens dag', schedule: { kind: 'allDay', startDate: '2026-10-02', endDateExclusive: '2026-10-03' }, timePending: true, status: 'scheduled', summary: 'Vi planerar en aktivitet eller försäljning i samband med Kanelbullens dag. Mer information kommer.', description: 'Vi uppmärksammar Kanelbullens dag fredag 2 oktober 2026. Klockslag och upplägg meddelas senare.' }
   ],
   volunteerTasks: [],
   news: [],
