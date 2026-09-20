@@ -77,15 +77,16 @@ if (helpContact) {
   }
   sectionGuard('next-activity', () => {
     const split = C.selectActivities(arr('activities'), now), box = $('next-activity'); box.replaceChildren();
-    if (split.next) box.append(activityCard(split.next, false, true));
-    else {
+    const active = [split.next, ...split.upcoming].filter(Boolean);
+    if (active.length) {
+      box.replaceChildren(...active.map(a => activityCard(a)));
+    } else {
       const empty = el('div', 'empty');
       // Calendar icon, a functional empty-state symbol.
       const icon = el('div', 'empty-calendar'); icon.setAttribute('aria-hidden', 'true');
       icon.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4m10-4v4M3 11h18m-14 4h3m4 0h3"/></svg>';
       append(empty, icon, el('h3', '', 'Nästa uppdrag kluras ut!'), el('p', '', 'Just nu laddar vi för nästa aktivitet. Datum och anmälan dyker upp här när planen är klar.'), el('p', 'small-note', 'Har du en idé? Hör gärna av dig till klassföräldrarna.')); box.append(empty);
     }
-    for (const [id, list] of [['upcoming', split.upcoming], ['planned', split.planned]]) { $(id).replaceChildren(...list.map(a => activityCard(a))); $(id + '-section').hidden = !list.length; }
     const historic = [...split.past, ...arr('archivedActivities').filter(a => a && C.validSchedule(a.schedule))];
     const unique = [...new Map(historic.map(a => [a.id, a])).values()].sort((a, b) => { const ka = C.sortKey(a), kb = C.sortKey(b); return (Number.isFinite(kb) ? kb : 0) - (Number.isFinite(ka) ? ka : 0); });
     $('archive').replaceChildren(...unique.map(a => activityCard(a, true))); $('archive-count').textContent = String(unique.length);
