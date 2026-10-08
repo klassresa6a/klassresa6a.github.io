@@ -5,6 +5,7 @@ window.KLASSRESA_CONFIG = {
   finance: { balanceSek: 32400, goalSek: 50000, balanceUpdatedAt: null },
   contact: { email: 'gingit.scully@gmail.com' },
   activities: [
+    { id: 'sales-deadline-2026', title: 'Sista beställningsdag · Kakservice och Kirrat & Klart', schedule: { kind: 'allDay', startDate: '2026-10-13', endDateExclusive: '2026-10-14' }, status: 'scheduled', summary: 'Sista dagen att registrera beställningar för höstens försäljning. Båda försäljningarna pågår 22 september–13 oktober. 50 % går till klasskassan.', description: 'Registrera beställningarna senast 13 oktober. Leveransen tar cirka fyra dagar och kunderna beräknas kunna få varorna från 18 oktober. Registrering som säljare: Kakservice https://www.kakservice.se/minasidor/FYTEMY och Kirrat & Klart https://www.kirratochklart.se/startaforsaljning/2534fed9' },
     { id: 'halloween-2026', title: 'Halloween', schedule: { kind: 'allDay', startDate: '2026-11-08', endDateExclusive: '2026-11-09' }, timePending: true, status: 'scheduled', summary: 'Lokalen är bokad. Mer information om aktiviteter, snacks och föräldrahjälp kommer. Klockslag meddelas senare.' },
   ],
   volunteerTasks: [],
@@ -41,6 +42,5 @@ window.KLASSRESA_CONFIG = {
     { id: 'film-2026', title: 'Filmkväll · A Minecraft Movie', schedule: { kind: 'timed', start: '2026-03-22T15:30:00+01:00', end: '2026-03-22T18:00:00+01:00' }, status: 'scheduled', place: 'Lokalen, Tunnlandsvägen 97', summary: 'En planerad filmkväll med popcorn, chips och dricka som tack för klassens insatser.', signupUrl: 'https://forms.gle/i9yKtNpYMkemE9w66' },
     { id: 'cleanup-2026', title: 'Bromma Vårstädning', schedule: { kind: 'timed', start: '2026-04-18T10:00:00+02:00', end: '2026-04-18T13:00:00+02:00' }, status: 'scheduled', place: 'Bromma, Riksby', summary: 'Planerad städning av område BRO30. Den tidigare informationen angav en ersättning på 3 000 kr; det är inte en separat verifierad bokföringspost.', signupUrl: 'https://forms.gle/PTYpKLqFAQ7bMf3j9' },
     { id: 'picnic-2026', title: 'Sommarpicknick', schedule: { kind: 'tentative', label: 'Juni 2026 · tidigare idé' }, status: 'scheduled', summary: 'Sparad från den tidigare planeringen. Genomförande är inte bekräftat.' },
-    { id: 'loppis-2026', title: 'Garageloppis', schedule: { kind: 'tentative', label: 'Hösten 2026 · tidigare idé' }, status: 'scheduled', summary: 'Sparad från den tidigare planeringen. Inget nytt datum är bestämt.' }
   ]
 };
