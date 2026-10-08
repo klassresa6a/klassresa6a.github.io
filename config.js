@@ -2,7 +2,7 @@
 // Даты и время — по Стокгольму. Неизвестные значения оставляйте null.
 window.KLASSRESA_CONFIG = {
   className: '6A',
-  finance: { balanceSek: 26731, goalSek: 50000, balanceUpdatedAt: null },
+  finance: { balanceSek: 32400, goalSek: 50000, balanceUpdatedAt: null },
   contact: { email: 'gingit.scully@gmail.com' },
   activities: [
     { id: 'halloween-2026', title: 'Halloween', schedule: { kind: 'allDay', startDate: '2026-11-08', endDateExclusive: '2026-11-09' }, timePending: true, status: 'scheduled', summary: 'Lokalen är bokad. Mer information om aktiviteter, snacks och föräldrahjälp kommer. Klockslag meddelas senare.' },
