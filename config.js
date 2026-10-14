@@ -2,7 +2,7 @@
 // Даты и время — по Стокгольму. Неизвестные значения оставляйте null.
 window.KLASSRESA_CONFIG = {
   className: '6A',
-  finance: { balanceSek: 38100, goalSek: 50000, balanceUpdatedAt: null },
+  finance: { balanceSek: 41450, goalSek: 50000, balanceUpdatedAt: null },
   contact: { email: 'gingit.scully@gmail.com' },
   activities: [
     { id: 'sales-deadline-2026', title: 'Sista beställningsdag · Kakservice och Kirrat & Klart', schedule: { kind: 'allDay', startDate: '2026-10-13', endDateExclusive: '2026-10-14' }, status: 'scheduled', summary: 'Sista dagen att registrera beställningar för höstens försäljning. Båda försäljningarna pågår 22 september–13 oktober. 50 % går till klasskassan.', description: 'Registrera beställningarna senast 13 oktober. Leveransen tar cirka fyra dagar och kunderna beräknas kunna få varorna från 18 oktober. Registrering som säljare: Kakservice https://www.kakservice.se/minasidor/FYTEMY och Kirrat & Klart https://www.kirratochklart.se/startaforsaljning/2534fed9' },
